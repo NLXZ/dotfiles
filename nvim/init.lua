@@ -3,6 +3,9 @@
 -- Theme
 vim.cmd("colorscheme nlxz")
 
+-- Line number
+vim.wo.number = true
+
 -- History
 vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
 vim.opt.undofile = true
@@ -12,6 +15,10 @@ vim.opt.undoreload = 10000
 -- Clipboard
 vim.api.nvim_set_keymap('n', 'y', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
+
+-- Paragraph navigation
+vim.api.nvim_set_keymap('n', '<C-Up>', '{', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-Down>', '}', { noremap = true, silent = true })
 
 -- Packer Install
 local packer_bootstrap = false

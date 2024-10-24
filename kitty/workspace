@@ -1,0 +1,16 @@
+new_tab VPN
+layout splits
+cd $WORKDIR
+launch 'mkdir -p "$WORKDIR"/{1-Recon,2-Exploit,3-Info,4-Data,5-Report}'
+launch zsh
+
+new_tab Recon
+layout splits
+cd $WORKDIR/1-Recon
+launch zsh
+focus
+
+new_tab Term
+layout splits
+cd $WORKDIR
+launch zsh
