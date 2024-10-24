@@ -1,0 +1,81 @@
+# == Classic ==
+classic: false
+
+# == Blocks ==
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+# == Color ==
+color:
+  when: auto
+  theme: default
+
+# == Date ==
+date: date
+
+# == Dereference ==
+dereference: false
+
+# == Display ==
+# display: all
+
+# == Icons ==
+icons:
+  when: never
+  theme: fancy
+  separator: " "
+
+# == Ignore Globs ==
+# ignore-globs:
+#   - .git
+
+# == Indicators ==
+indicators: false
+
+# == Layout ==
+layout: grid
+
+# == Recursion ==
+recursion:
+  enabled: false
+  # depth: 3
+
+# == Size ==
+size: default
+
+# == Permission ==
+# permission: rwx
+
+# == Sorting ==
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+
+# == No Symlink ==
+no-symlink: false
+
+# == Total size ==
+total-size: false
+
+# == Hyperlink ==
+hyperlink: never
+
+# == Symlink arrow ==
+symlink-arrow: ⇒
+
+# == Header ==
+header: false
+
+# == Literal ==
+literal: false
+
+# == Truncate owner ==
+truncate-owner:
+  after:
+  marker: ""
