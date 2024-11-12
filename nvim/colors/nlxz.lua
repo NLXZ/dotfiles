@@ -1,22 +1,22 @@
 -- Nvim Theme
 
 local palette = {
-    color0 = "#202020",
-    color1 = "#ff1f48",
-    color2 = "#2aa9A1",
-    color3 = "#ff9f45",
-    color4 = "#4548ff",
-    color5 = "#8045ff",
-    color6 = "#458fff",
-    color7 = "#cccccc",
-    color8 = "#404040",
-    color9 = "#ff0000",
-    color10 = "#00ff00",
-    color11 = "#ffff00",
-    color12 = "#0000ff",
-    color13 = "#ff00ff",
-    color14 = "#00ffff",
-    color15 = "#ffffff",
+    color0  = "#111111",
+    color1  = "#ff2250",
+    color2  = "#0be96b",
+    color3  = "#ffae0c",
+    color4  = "#5671ff",
+    color5  = "#c351ff",
+    color6  = "#0ce2c8",
+    color7  = "#eeeeee",
+    color8  = "#333333",
+    color9  = "#ff0a64",
+    color10 = "#53ff1a",
+    color11 = "#ffd70c",
+    color12 = "#0aa0ff",
+    color13 = "#f949ff",
+    color14 = "#02ddff",
+    color15 = "#cccccc",
 }
 
 vim.cmd('highlight clear')

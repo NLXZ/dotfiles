@@ -1,0 +1,11 @@
+/*  Rofi Config  */
+
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "";
+    drun-match-fields: "name";
+    no-tokenize: true;
+}
+
+@theme "app_launcher"
