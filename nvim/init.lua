@@ -7,7 +7,7 @@ vim.cmd("colorscheme nlxz")
 vim.wo.number = true
 
 -- History
-vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
+vim.opt.undodir = fn.stdpath('data') .. '/undodir'
 vim.opt.undofile = true
 vim.opt.undolevels = 1000
 vim.opt.undoreload = 10000

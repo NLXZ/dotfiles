@@ -2,7 +2,7 @@
 
 # Init
 exec_always killall -q polybar; polybar -q main -c ~/.config/polybar/config.ini &  # Polybar
-exec_always feh --bg-fill /usr/share/backgrounds/background.jpg                    # Background
+exec_always feh --bg-fill /usr/share/backgrounds/background.png                    # Background
 exec_always --no-startup-id nm-applet                                              # NetworkManager
 exec_always --no-startup-id vmware-user                                            # VMWare
 exec_always --no-startup-id setxkbmap es                                           # Keyboard Layout
