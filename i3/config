@@ -1,14 +1,11 @@
-# i3 Config
+# i3 config
 
 # Init
-exec_always killall -q polybar; polybar -q main -c ~/.config/polybar/config.ini &  # Polybar
-exec_always feh --bg-fill /usr/share/backgrounds/background.png                    # Background
-exec_always --no-startup-id nm-applet                                              # NetworkManager
-exec_always --no-startup-id vmware-user                                            # VMWare
-exec_always --no-startup-id setxkbmap es                                           # Keyboard Layout
+exec_always feh --bg-fill /usr/share/backgrounds/background.png  # Background
+exec_always --no-startup-id vmware-user                          # VMWare
 
 # Font
-font pango:Classic Console Neue 10
+font pango:JetBrains Mono 10
 
 # No borders
 hide_edge_borders smart
@@ -28,7 +25,7 @@ bindsym $mod+Return  exec --no-startup-id kitty
 bindsym $mod+space   exec --no-startup-id rofi -show drun
 bindsym $mod+f       exec --no-startup-id firefox-esr
 bindsym $mod+b       exec --no-startup-id burpsuite
-bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id flameshot gui
 
 bindsym F1 exec --no-startup-id ~/.config/bin/fkeys.sh 1  # Host IP
 bindsym F2 exec --no-startup-id ~/.config/bin/fkeys.sh 2  # Target IP
@@ -72,3 +69,23 @@ bindsym $mod+6 workspace number 6
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
+
+bar {
+    status_command i3blocks -c ~/.config/i3/i3blocks.config
+    font pango:JetBrains Mono ExtraBold 10
+    position bottom
+    tray_output none
+    height 30
+    padding 5 15
+    colors {
+        background #222222
+        statusline #cccccc
+
+        focused_workspace  #222222 #222222 #5671ff
+        inactive_workspace #222222 #222222 #cccccc
+    }
+}
+
+client.focused          #5671ff #5671ff #eeeeee
+client.focused_inactive #333333 #333333 #cccccc
+client.unfocused        #333333 #333333 #cccccc

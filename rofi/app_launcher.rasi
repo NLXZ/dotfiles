@@ -1,16 +1,12 @@
 * {
-    font:   "Classic Console Neue 12";
-
+    font:   "JetBrains Mono 10";
     bg0:     #000000;
     bg1:     #303030;
     fg0:     #cccccc;
-
     accent-color:     #5671ff;
     urgent-color:     #ffae0c;
-
     background-color:   transparent;
     text-color:         @fg0;
-
     margin:     0;
     padding:    0;
     spacing:    0;
@@ -19,14 +15,12 @@
 window {
     location:   center;
     width:      480;
-
     background-color:   @bg0;
 }
 
 inputbar {
     spacing:    8px; 
     padding:    8px;
-
     background-color:   @bg1;
 }
 
@@ -47,7 +41,6 @@ listview {
     padding:    4px 0;
     lines:      8;
     columns:    1;
-
     fixed-height:   false;
 }
 

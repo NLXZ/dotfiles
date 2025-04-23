@@ -1,5 +1,5 @@
 # NLXZ's dotfiles
-![Main view screenshot](https://i.imgur.com/TMWVCr3.png)
+![Main view screenshot](https://i.imgur.com/1anRrI8.png)
 
 ## Installation
 I created a repository with an Ansible playbook to automatically setup Kali Linux with this dotfiles and some more configurations.

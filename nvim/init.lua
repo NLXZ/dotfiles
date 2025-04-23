@@ -1,7 +1,8 @@
 -- Nvim Config
+local fn = vim.fn
 
 -- Theme
-vim.cmd("colorscheme nlxz")
+vim.cmd("colorscheme colors")
 
 -- Line number
 vim.wo.number = true
@@ -22,7 +23,6 @@ vim.api.nvim_set_keymap('n', '<C-Down>', '}', { noremap = true, silent = true })
 
 -- Packer Install
 local packer_bootstrap = false
-local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
     packer_bootstrap = true

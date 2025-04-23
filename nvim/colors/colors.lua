@@ -23,7 +23,7 @@ vim.cmd('highlight clear')
 vim.cmd('syntax reset')
 
 vim.o.background = 'dark'
-vim.g.colors_name = 'nlxz'
+vim.g.colors_name = 'colors'
 vim.opt.termguicolors = true
 vim.opt.cursorline = true
 
