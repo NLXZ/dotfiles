@@ -1,8 +1,8 @@
 # i3 config
 
 # Init
-exec_always feh --bg-fill /usr/share/backgrounds/background.jpg  # Background
-exec_always --no-startup-id vmware-user                          # VMWare
+exec_always feh --bg-fill ~/.config/wallpaper  # Background
+exec_always --no-startup-id vmware-user        # VMWare
 
 # Font
 font pango:JetBrains Mono 10
