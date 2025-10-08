@@ -72,11 +72,10 @@ bindsym $mod+9 workspace number 9
 
 bar {
     status_command i3blocks -c ~/.config/i3/i3blocks.config
-    font pango:JetBrains Mono ExtraBold 10
+    font pango:JetBrains Mono Bold 9
     position bottom
     tray_output none
-    height 30
-    padding 5 15
+    padding 8 15
     colors {
         background #000000
         statusline #cccccc
