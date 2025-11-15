@@ -1,5 +1,25 @@
 # ~/.zsh/plugins.zsh
 
+ZSH_PLUGINS="~/.zsh/plugins"
+
+# zsh-syntax-highlighting
+SYNTAX_DIR="$ZSH_PLUGINS/zsh-syntax-highlighting"
+if [ ! -d "$SYNTAX_DIR" ] || [ -z "$(ls -A $SYNTAX_DIR)" ]; then
+  echo "Instalando zsh-syntax-highlighting..."
+  mkdir -p "$SYNTAX_DIR"
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting "$SYNTAX_DIR"
+  source ~/.zshrc
+fi
+
+# zsh-autosuggestions
+AUTOSUGGEST_DIR="$ZSH_PLUGINS/zsh-autosuggestions"
+if [ ! -d "$AUTOSUGGEST_DIR" ] || [ -z "$(ls -A $AUTOSUGGEST_DIR)" ]; then
+  echo "Instalando zsh-autosuggestions..."
+  mkdir -p "$AUTOSUGGEST_DIR"
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$AUTOSUGGEST_DIR"
+  source ~/.zshrc
+fi
+
 autoload -Uz compinit
 compinit
 
