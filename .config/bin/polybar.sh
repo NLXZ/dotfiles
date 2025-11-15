@@ -1,5 +1,5 @@
 #!/bin/sh
-bars="main time date"
+bars="bordr main time date"
 
 pkill -x polybar
 while pgrep -x polybar >/dev/null; do sleep 0.1; done
