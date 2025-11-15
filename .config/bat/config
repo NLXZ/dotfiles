@@ -1,0 +1,5 @@
+# ~/.config/bat/config
+
+--theme="base16"
+--style=plain
+--paging=never
