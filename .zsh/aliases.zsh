@@ -20,4 +20,5 @@ alias docker-clean='docker system prune --all --volumes --force'
 
 # Zoxide
 alias w='z workdir'
+alias -- -='z -'
 zoxide add "$WORKDIR"

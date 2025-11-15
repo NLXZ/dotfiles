@@ -16,13 +16,11 @@ export PATH=/home/$NUSER/.local/bin:$PATH
 # Plugins
 [ -f ~/.zsh/plugins.zsh ] && source ~/.zsh/plugins.zsh
 
-DISABLE_MAGIC_FUNCTIONS=true
-
 # Prompt
+setopt PROMPT_SUBST
+autoload -U colors && colors
 PROMPT='%{$fg[blue]%}%~%{$reset_color%} %(!.#.$) '
 DISABLE_AUTO_TITLE=true
-
-# Precmd newline
 precmd() {
     [[ -z $NEW_LINE_BEFORE_PROMPT ]] && NEW_LINE_BEFORE_PROMPT=1 || echo ""
 }
