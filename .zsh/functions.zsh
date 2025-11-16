@@ -69,6 +69,7 @@ git-dir() {
 bloodhound() {
     local opt="$1"
     local port="${2:-8000}"
+    local current_dir="$PWD"
 
     cd /opt/bloodhound
 
@@ -93,4 +94,6 @@ bloodhound() {
             return 1
             ;;
     esac
+
+    cd "$current_dir"
 }

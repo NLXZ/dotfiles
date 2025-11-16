@@ -1,6 +1,6 @@
 # ~/.zsh/plugins.zsh
 
-ZSH_PLUGINS="~/.zsh/plugins"
+ZSH_PLUGINS="$HOME/.zsh/plugins"
 
 autoload -Uz compinit
 compinit
@@ -11,7 +11,6 @@ if [ ! -d "$SYNTAX_DIR" ] || [ -z "$(ls -A $SYNTAX_DIR)" ]; then
   echo "Installing zsh-syntax-highlighting..."
   mkdir -p "$SYNTAX_DIR"
   git clone https://github.com/zsh-users/zsh-syntax-highlighting "$SYNTAX_DIR" > /dev/null
-  source ~/.zshrc
 fi
 [ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

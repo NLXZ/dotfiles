@@ -8,6 +8,5 @@ I created a repository with an Ansible playbook to automatically setup Kali Linu
 Or just run:
 ```shell
 git clone https://github.com/NLXZ/dotfiles
-cd dotfiles
 stow -t "$HOME" -d dotfiles --adopt .
 ```
