@@ -5,7 +5,13 @@ target() {
 }
 
 myip() {
-    ip link show tun0 &>/dev/null && ip addr show tun0 | awk '/inet /{print $2}' | cut -d/ -f1 || hostname -I | awk '{print $1}'
+    ip -4 -j addr show | jq -r '
+        (.[] | select(.ifname=="tun0") |
+        .addr_info[] | select(.family=="inet") | .local)
+        //
+        (.[] | select(.ifname=="eth0") |
+        .addr_info[] | select(.family=="inet") | .local)
+    '
 }
 
 http() {
@@ -37,13 +43,9 @@ s() {
     fi
 
     if [[ -n "$password" ]]; then
-        sshpass -p "$password" ssh \
-            -o StrictHostKeyChecking=no \
-            -o GlobalKnownHostsFile=/dev/null \
-            -o UserKnownHostsFile=/dev/null \
-            "$target" "$@"
+        sshpass -p "$password" ssh -o StrictHostKeyChecking=no -o GlobalKnownHostsFile=/dev/null -o UserKnownHostsFile=/dev/null "$target" "$@"
     else
-        ssh "$target" "$@"
+        ssh -o StrictHostKeyChecking=no -o GlobalKnownHostsFile=/dev/null -o UserKnownHostsFile=/dev/null "$target" "$@"
     fi
 }
 

@@ -1,7 +1,5 @@
 # ~/.zsh/aliases.zsh
 
-setopt aliases
-
 # Colors
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
@@ -11,6 +9,7 @@ alias wfuzz='wfuzz -c'
 # Custom
 alias cat='batcat'
 alias c='xsel -bi'
+alias kitty-reload='kill -SIGUSR1 $KITTY_PID'
 alias ls='lsd'
 alias p='proxychains -q'
 alias py='python3'

@@ -20,14 +20,13 @@ bindsym $mod+f       exec --no-startup-id firefox-esr
 bindsym $mod+b       exec --no-startup-id burpsuite
 bindsym Print        exec --no-startup-id flameshot gui
 
-bindsym F1 exec --no-startup-id ~/.config/bin/fkeys.sh 1  # Host IP
-bindsym F2 exec --no-startup-id ~/.config/bin/fkeys.sh 2  # Target IP
-bindsym F3 exec --no-startup-id ~/.config/bin/fkeys.sh 3  # Copy selection
-bindsym F4 exec --no-startup-id ~/.config/bin/fkeys.sh 4  # Paste
+bindsym F1 exec --no-startup-id sh ~/.config/bin/fkeys.sh 1  # Host IP
+bindsym F2 exec --no-startup-id sh ~/.config/bin/fkeys.sh 2  # Target IP
+bindsym F3 exec --no-startup-id sh ~/.config/bin/fkeys.sh 3  # Copy selection
+bindsym F4 exec --no-startup-id sh ~/.config/bin/fkeys.sh 4  # Paste
 
 bindsym $mod+Shift+l layout toggle split
 bindsym $mod+Shift+f floating toggle
-bindsym $mod+F11     fullscreen toggle
 
 bindsym $mod+Left    focus left
 bindsym $mod+Down    focus down

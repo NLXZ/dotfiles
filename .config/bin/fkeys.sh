@@ -1,16 +1,13 @@
-#!/bin/bash
-
+#!/bin/sh
 TERMINAL_ID=$(xdotool search --onlyvisible --class kitty | head -n 1)
 xdotool windowactivate "$TERMINAL_ID"
-sleep .1
+
+sleep 0.1
 
 case $1 in
     1)
-        if ip link show tun0 &>/dev/null; then
-            xdotool type --clearmodifiers --delay 0 "$(ip addr show tun0 | grep 'inet ' | awk '{ print $2 }' | cut -d/ -f1)"
-        else
-            xdotool type --clearmodifiers --delay 0 "$(hostname -I | awk '{ print $1 }')"
-        fi
+        IP=$(ip -4 -j addr show | jq -r '(.[] | select(.ifname=="tun0") | .addr_info[] | select(.family=="inet") | .local) // (.[] | select(.ifname=="eth0") | .addr_info[] | select(.family=="inet") | .local)')
+        xdotool type --clearmodifiers --delay 0 "$IP"
     ;;
     2)
         xdotool type --clearmodifiers --delay 0 "$(awk 'NR==1{printf $0; next} {print}' ~/.target 2>/dev/null)"
