@@ -20,11 +20,7 @@ http() {
 }
 
 smb() {
-    local sharename="shared"
-    local path="$PWD"
-    local args=("$@")
-
-    smbserver.py -smb2support "${args[@]}" "$sharename" "$path"
+    smbserver.py -smb2support "$@" shared "$PWD"
 }
 
 s() {

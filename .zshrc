@@ -21,7 +21,19 @@ export PATH=/home/$NUSER/.local/bin:$PATH
 setopt PROMPT_SUBST
 autoload -U colors && colors
 PROMPT='%{$fg[blue]%}%~%{$reset_color%} %(!.#.$) '
-DISABLE_AUTO_TITLE=true
 precmd() {
     [[ -z $NEW_LINE_BEFORE_PROMPT ]] && NEW_LINE_BEFORE_PROMPT=1 || echo ""
 }
+
+# Mods
+DISABLE_AUTO_TITLE=true
+DISABLE_MAGIC_FUNCTIONS=true
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=999999
+SAVEHIST=999999
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt APPEND_HISTORY
