@@ -5,31 +5,49 @@ ZSH_PLUGINS="$HOME/.zsh/plugins"
 autoload -Uz compinit
 compinit
 
-# zsh-syntax-highlighting
-SYNTAX_DIR="$ZSH_PLUGINS/zsh-syntax-highlighting"
-if [ ! -d "$SYNTAX_DIR" ] || [ -z "$(ls -A $SYNTAX_DIR)" ]; then
-  echo "[*] Installing zsh-syntax-highlighting..."
-  mkdir -p "$SYNTAX_DIR"
-  git clone -q https://github.com/zsh-users/zsh-syntax-highlighting "$SYNTAX_DIR"
-fi
-[ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# zsh-autosuggestions
-AUTOSUGGEST_DIR="$ZSH_PLUGINS/zsh-autosuggestions"
-if [ ! -d "$AUTOSUGGEST_DIR" ] || [ -z "$(ls -A $AUTOSUGGEST_DIR)" ]; then
-  echo "[*] Installing zsh-autosuggestions..."
-  mkdir -p "$AUTOSUGGEST_DIR"
-  git clone -q https://github.com/zsh-users/zsh-autosuggestions "$AUTOSUGGEST_DIR" > /dev/null
-fi
-[ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # fzf
 source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
 
-# FIX suggest-paste
+# zsh-syntax-highlighting
+SYNTAX_DIR="$ZSH_PLUGINS/zsh-syntax-highlighting"
+if [ ! -d "$SYNTAX_DIR" ] || [ -z "$(ls -A $SYNTAX_DIR)" ]; then
+  echo "[*] Installing zsh-syntax-highlighting zsh plugin..."
+  mkdir -p "$SYNTAX_DIR"
+  git clone -q https://github.com/zsh-users/zsh-syntax-highlighting "$SYNTAX_DIR"
+fi
+[ -f "$SYNTAX_DIR/zsh-syntax-highlighting.zsh" ] && source "$SYNTAX_DIR/zsh-syntax-highlighting.zsh"
+
+# zsh-autosuggestions
+AUTOSUGGEST_DIR="$ZSH_PLUGINS/zsh-autosuggestions"
+if [ ! -d "$AUTOSUGGEST_DIR" ] || [ -z "$(ls -A $AUTOSUGGEST_DIR)" ]; then
+  echo "[*] Installing zsh-autosuggestions zsh plugin..."
+  mkdir -p "$AUTOSUGGEST_DIR"
+  git clone -q https://github.com/zsh-users/zsh-autosuggestions "$AUTOSUGGEST_DIR" > /dev/null
+fi
+[ -f "$AUTOSUGGEST_DIR/zsh-autosuggestions.zsh" ] && source "$AUTOSUGGEST_DIR/zsh-autosuggestions.zsh"
+
+# fzf-tab
+FZFTAB_DIR="$ZSH_PLUGINS/fzf-tab"
+if [ ! -d "$FZFTAB_DIR" ] || [ -z "$(ls -A $FZFTAB_DIR)" ]; then
+  echo "[*] Installing fzf-tab zsh plugin..."
+  mkdir -p "$FZFTAB_DIR"
+  git clone -q https://github.com/Aloxaf/fzf-tab "$FZFTAB_DIR" > /dev/null
+fi
+[ -f "$FZFTAB_DIR/fzf-tab.plugin.zsh" ] && source "$FZFTAB_DIR/fzf-tab.plugin.zsh"
+
+# sudo
+SUDO_DIR="$ZSH_PLUGINS/sudo"
+if [ ! -d "$SUDO_DIR" ] || [ -z "$(ls -A $SUDO_DIR)" ]; then
+  echo "[*] Installing sudo zsh plugin..."
+  mkdir -p "$SUDO_DIR"
+  git clone -q https://github.com/zap-zsh/sudo "$SUDO_DIR" > /dev/null
+fi
+[ -f "$SUDO_DIR/sudo.plugin.zsh" ] && source "$SUDO_DIR/sudo.plugin.zsh"
+
+# fix suggest-paste
 pasteinit() {
 OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
 zle -N self-insert url-quote-magic
