@@ -4,9 +4,17 @@ DISABLE_AUTO_TITLE=true
 DISABLE_MAGIC_FUNCTIONS=true
 PROMPT_EOL_MARK=""
 
+# case insensitive tab
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+setopt nocaseglob
+
+# comments
 setopt interactivecomments
+
+# change dir
 setopt autocd
 
+# fix pasting
 pasteinit() {
     OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
     zle -N self-insert url-quote-magic

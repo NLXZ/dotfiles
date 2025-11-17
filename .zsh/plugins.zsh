@@ -12,7 +12,7 @@ zsh_plugin() {
     local plugin_dir="$ZSH_PLUGINS/$1" plugin_file="$2" plugin_url="$3"
 
     if [[ ! -f "$plugin_dir/$plugin_file" ]]; then
-        echo "[*] Installing $(basename "$plugin_dir") plugin..."
+        echo "[*] Installing $(basename "$plugin_dir")..."
         mkdir -p "${plugin_dir:h}"
         git clone -q "$plugin_url" "$plugin_dir"
     fi
@@ -35,7 +35,6 @@ for plugin in $plugins; do
     zsh_plugin "$dir" "$file" "$url"
 done
 
-zstyle ':plugin:ez-compinit' 'compstyle' 'zshzoo'
 zstyle ':plugin:ez-compinit' 'use-cache' 'yes'
 
 zoxide query "workdir" 2>&1 > /dev/null || zoxide add "$WORKDIR"
