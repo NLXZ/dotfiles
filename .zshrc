@@ -23,7 +23,7 @@ export PATH=/home/$NUSER/.local/bin:$PATH
 # prompt
 [ -f ~/.zsh/prompt.zsh ] && source ~/.zsh/prompt.zsh
 
-# keybinds
+# key-bindings
 [ -f ~/.zsh/key-bindings.zsh ] && source ~/.zsh/key-bindings.zsh
 
 # options
