@@ -13,8 +13,8 @@ eval "$(zoxide init zsh)"
 
 # zsh-syntax-highlighting
 SYNTAX_DIR="$ZSH_PLUGINS/zsh-syntax-highlighting"
-if [ ! -d "$SYNTAX_DIR" ] || [ -z "$(ls -A $SYNTAX_DIR)" ]; then
-  echo "[*] Installing zsh-syntax-highlighting zsh plugin..."
+if [ ! -d "$SYNTAX_DIR/.git)" ]; then
+  echo "[*] Installing zsh-syntax-highlighting plugin..."
   mkdir -p "$SYNTAX_DIR"
   git clone -q https://github.com/zsh-users/zsh-syntax-highlighting "$SYNTAX_DIR"
 fi
@@ -22,8 +22,8 @@ fi
 
 # zsh-autosuggestions
 AUTOSUGGEST_DIR="$ZSH_PLUGINS/zsh-autosuggestions"
-if [ ! -d "$AUTOSUGGEST_DIR" ] || [ -z "$(ls -A $AUTOSUGGEST_DIR)" ]; then
-  echo "[*] Installing zsh-autosuggestions zsh plugin..."
+if [ ! -d "$AUTOSUGGEST_DIR/.git)" ]; then
+  echo "[*] Installing zsh-autosuggestions plugin..."
   mkdir -p "$AUTOSUGGEST_DIR"
   git clone -q https://github.com/zsh-users/zsh-autosuggestions "$AUTOSUGGEST_DIR" > /dev/null
 fi
@@ -31,8 +31,8 @@ fi
 
 # fzf-tab
 FZFTAB_DIR="$ZSH_PLUGINS/fzf-tab"
-if [ ! -d "$FZFTAB_DIR" ] || [ -z "$(ls -A $FZFTAB_DIR)" ]; then
-  echo "[*] Installing fzf-tab zsh plugin..."
+if [ ! -d "$FZFTAB_DIR/.git)" ]; then
+  echo "[*] Installing fzf-tab plugin..."
   mkdir -p "$FZFTAB_DIR"
   git clone -q https://github.com/Aloxaf/fzf-tab "$FZFTAB_DIR" > /dev/null
 fi
@@ -40,8 +40,8 @@ fi
 
 # sudo
 SUDO_DIR="$ZSH_PLUGINS/sudo"
-if [ ! -d "$SUDO_DIR" ] || [ -z "$(ls -A $SUDO_DIR)" ]; then
-  echo "[*] Installing sudo zsh plugin..."
+if [ ! -d "$SUDO_DIR/.git)" ]; then
+  echo "[*] Installing sudo plugin..."
   mkdir -p "$SUDO_DIR"
   git clone -q https://github.com/zap-zsh/sudo "$SUDO_DIR" > /dev/null
 fi
@@ -49,11 +49,12 @@ fi
 
 # fix suggest-paste
 pasteinit() {
-OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-zle -N self-insert url-quote-magic
+    OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+    zle -N self-insert url-quote-magic
 }
 pastefinish() {
-zle -N self-insert $OLD_SELF_INSERT
+    BUFFER=${BUFFER%%[$'\r\n']}
+    zle -N self-insert $OLD_SELF_INSERT
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish

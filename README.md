@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 ![Main view screenshot](https://i.imgur.com/nar96lN.png)
 
 ## Installation
@@ -7,6 +7,9 @@ I created a repository with an Ansible playbook to automatically setup Kali Linu
 
 Or just run:
 ```shell
+# Clone the repository
 git clone https://github.com/NLXZ/dotfiles
+
+# Create the link (CAUTION)
 stow -t "$HOME" -d dotfiles --adopt .
 ```
