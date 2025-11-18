@@ -1,4 +1,4 @@
-# ~/.zsh/options.zsh
+# ~/.zsh/zsh-options.zsh
 
 # history
 HISTFILE="$HOME/.zsh_history"
