@@ -5,6 +5,7 @@ ZSH_PLUGINS=(
     "ez-compinit"
     "zsh-autosuggestions"
     "zoxide"
+    "fzf"
     "fzf-tab"
     "sudo"
     "zsh-syntax-highlighting"
