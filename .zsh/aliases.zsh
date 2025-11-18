@@ -6,16 +6,19 @@ alias grep='grep --color=auto'
 alias ffuf='ffuf -c'
 alias wfuzz='wfuzz -c'
 
-# custom
+# replacements
 alias cat='batcat'
+alias ls='eza --color=always --group-directories-first'
+
+# custom
 alias c='xsel -bi'
-alias kitty-reload='kill -SIGUSR1 $KITTY_PID'
-alias ls='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -h'
 alias p='proxychains -q'
 alias py='python3'
 alias vi='nvim'
-alias vpn='sudo openvpn'
+alias sudo=' sudo'
+alias vpn='openvpn'
 alias docker-clean='docker system prune --all --volumes --force'
+alias kitty-reload='kill -SIGUSR1 $KITTY_PID'
 
 # zoxide
 alias w='z workdir'

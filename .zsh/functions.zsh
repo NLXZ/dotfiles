@@ -65,31 +65,33 @@ git-dir() {
 bloodhound() {
     local opt="$1"
     local port="${2:-8000}"
-    local current_dir="$PWD"
-
-    cd /opt/bloodhound
 
     case "$opt" in
+        install)
+            BLOODHOUND_PORT="$port" bloodhound-cli install
+            ;;
+        uninstall)
+            bloodhound-cli uninstall
+            ;;
         start)
-            BLOODHOUND_PORT="$port" && docker-compose up -d || return 1
-            echo "[*] Bloodhound running: http://127.0.0.1:$port"
+            BLOODHOUND_PORT="$port" bloodhound-cli up
             ;;
         stop)
-            docker-compose down
+            bloodhound-cli down
             ;;
         status)
-            docker-compose ps -a
+            bloodhound-cli running
             ;;
         *)
-            echo "Usage: "$0" <option>"
+            echo "Usage: "$0" <option> [port]"
             echo
             echo "Options:"
-            echo "  start     start bloodhound"
-            echo "  stop      stop bloodhound"
-            echo "  status    check status"
+            echo "  install"
+            echo "  uninstall"
+            echo "  start"
+            echo "  stop"
+            echo "  status"
             return 1
             ;;
     esac
-
-    cd "$current_dir"
 }
