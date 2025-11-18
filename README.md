@@ -3,13 +3,14 @@
 
 ## Installation
 I created a repository with an Ansible playbook to automatically setup Kali Linux with this dotfiles and some more configurations:  
+  
 [https://github.com/NLXZ/kali-setup](https://github.com/NLXZ/kali-setup)
 
 Or just run:
 ```shell
 # Clone the repository
-git clone https://github.com/NLXZ/dotfiles
+git clone https://github.com/NLXZ/dotfiles "$HOME/dotfiles"
 
 # Create the link (CAUTION)
-stow -t "$HOME" -d dotfiles --adopt .
+stow -t "$HOME" -d "$HOME/dotfiles" --adopt .
 ```
