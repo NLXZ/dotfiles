@@ -7,20 +7,18 @@ bind_all_modes() {
   done
 }
 
-# ctrl + right
-bind_all_modes '^[[1;5C' forward-word
-
-# ctrl + left
+# ctrl + left/right
 bind_all_modes '^[[1;5D' backward-word
+bind_all_modes '^[[1;5C' forward-word
 
 # ctrl + del
 bind_all_modes '^[[3;5~' kill-word
 
-# up arrow (fuzzy history search)
+# up/down arrows (fuzzy history search)
+autoload -U up-line-or-beginning-search
+zle -N up-line-or-beginning-search
 bind_all_modes "${terminfo[kcuu1]-^[[A]}" up-line-or-beginning-search
-
-# down arrow (fuzzy history search)
+autoload -U down-line-or-beginning-search
+zle -N down-line-or-beginning-search
 bind_all_modes "${terminfo[kcud1]-^[[B]}" down-line-or-beginning-search
-
-# clear fuzzy history search
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(up-line-or-beginning-search down-line-or-beginning-search)
