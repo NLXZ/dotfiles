@@ -19,4 +19,4 @@ done 2>/dev/null
 zstyle ':plugin:ez-compinit' 'use-cache' 'yes'
 
 # custom zozide entries
-zoxide query "workdir" 2>&1 > /dev/null || zoxide add "$WORKDIR"
+zoxide query "workdir" > /dev/null 2>&1 || zoxide add "$WORKDIR"
