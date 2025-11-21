@@ -11,6 +11,6 @@ Or just run:
 # Clone the repository
 git clone https://github.com/NLXZ/dotfiles ~/.dotfiles
 
-# Create the link (CAUTION)
-stow -t ~ -d ~/.dotfiles --adopt . --ignore='^_.*'
+# Create the links (CAUTION)
+stow -t ~ -d ~/.dotfiles --adopt .
 ```
