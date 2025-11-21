@@ -6,7 +6,7 @@ exec_always --no-startup-id sh ~/.config/bin/polybar.sh  # Polybar
 exec_always --no-startup-id vmware-user                  # VMWare
 
 # Allocate applications
-for_window [class="firefox-esr"]    move to workspace 2
+for_window [class="google-chrome"]    move to workspace 2
 for_window [class="burp-StartBurp"] move to workspace 3
 
 # Keybinds
@@ -16,7 +16,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+w       kill
 bindsym $mod+Return  exec --no-startup-id kitty
 bindsym $mod+space   exec --no-startup-id rofi -show drun
-bindsym $mod+f       exec --no-startup-id firefox-esr
+bindsym $mod+f       exec --no-startup-id google-chrome
 bindsym $mod+b       exec --no-startup-id burpsuite
 bindsym Print        exec --no-startup-id flameshot gui
 
