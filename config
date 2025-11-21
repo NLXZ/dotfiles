@@ -1,9 +1,9 @@
 # ~/.config/i3/config
 
 # Init
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper  # Wallpaper
-exec_always --no-startup-id sh ~/.config/bin/polybar.sh        # Polybar
-exec_always --no-startup-id vmware-user                        # VMWare
+exec_always --no-startup-id feh --bg-fill ~/.wallpaper   # Wallpaper
+exec_always --no-startup-id sh ~/.config/bin/polybar.sh  # Polybar
+exec_always --no-startup-id vmware-user                  # VMWare
 
 # Allocate applications
 for_window [class="firefox-esr"]    move to workspace 2
