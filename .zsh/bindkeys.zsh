@@ -1,5 +1,7 @@
 # ~/.zsh/bindkeys.zsh
 
+bindkey -e
+
 bind_all_modes() {
   local key=$1 widget=$2
   for mode in emacs viins vicmd; do
@@ -13,6 +15,9 @@ bind_all_modes '^[[1;5C' forward-word
 
 # ctrl + del
 bind_all_modes '^[[3;5~' kill-word
+
+# ctrl + u
+bindkey '^U' backward-kill-line
 
 # up/down arrows (fuzzy history search)
 autoload -U up-line-or-beginning-search

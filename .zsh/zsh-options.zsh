@@ -20,17 +20,3 @@ setopt interactivecomments
 
 # change directory by typing its name
 setopt autocd
-
-# fix pasting
-autoload -Uz bracketed-paste-magic
-pasteinit() {
-    OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-    zle -N self-insert url-quote-magic
-}
-pastefinish() {
-    BUFFER=${BUFFER%%[$'\r\n']}
-    zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
-ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(bracketed-paste)
