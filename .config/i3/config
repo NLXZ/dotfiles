@@ -6,7 +6,7 @@ exec_always --no-startup-id sh ~/.config/bin/polybar.sh  # Polybar
 exec_always --no-startup-id vmware-user                  # VMWare
 
 # Allocate applications
-for_window [class="google-chrome"]    move to workspace 2
+for_window [class="Google-chrome"]  move to workspace 2
 for_window [class="burp-StartBurp"] move to workspace 3
 
 # Keybinds
