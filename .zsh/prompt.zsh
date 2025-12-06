@@ -1,7 +1,7 @@
 # ~/.zsh/prompt.zsh
 
 # enable variable expansion in prompt
-setopt prompt_subst
+setopt promptsubst
 
 # enable colors
 autoload -U colors && colors
