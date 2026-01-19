@@ -28,7 +28,7 @@ bindsym F3 exec --no-startup-id sh ~/.config/bin/function_keys.sh 3  # Copy sele
 bindsym F4 exec --no-startup-id sh ~/.config/bin/function_keys.sh 4  # Paste
 
 bindsym $mod+Shift+l layout toggle split
-bindsym $mod+Shift+f floating toggle; [floating] border pixel 1; [tiling] border none
+bindsym $mod+Shift+f floating toggle; [floating] border pixel 2; [tiling] border none
 
 bindsym $mod+Left    focus left
 bindsym $mod+Down    focus down
@@ -65,13 +65,13 @@ bindsym $mod+8 workspace number 8; exec --no-startup-id bash ~/.config/polybar/d
 bindsym $mod+9 workspace number 9; exec --no-startup-id bash ~/.config/polybar/dock.sh
 
 # Font
-font pango:JetBrains Mono 9
+font pango:JetBrainsMono NF 9
 
 # Borders
 hide_edge_borders smart
 default_border none 
-default_floating_border pixel 1
-for_window [floating] border pixel 1
+default_floating_border pixel 2
+for_window [floating] border pixel 2
 for_window [tiling] border none
 
 # Gaps
@@ -80,7 +80,7 @@ gaps inner 6
 gaps outer 3
 
 # Colors
-set $accent      #0d0d0d
+set $accent      #2f2f2f
 set $background  #0b0b0b
 set $foreground  #eeeeee
 

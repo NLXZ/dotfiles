@@ -8,4 +8,4 @@ configuration {
     no-tokenize: true;
 }
 
-@theme "theme"
+@theme "run"

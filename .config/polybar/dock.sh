@@ -46,7 +46,7 @@ show_ui() {
     cmd="${choice%%:*}"
     case "$cmd" in
         Apps)
-            rofi -show drun
+            rofi -show drun -disable-history
             hide_ui
             ;;
         Kitty)

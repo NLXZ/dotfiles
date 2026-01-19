@@ -1,0 +1,115 @@
+// ~/.config/rofi/theme.rasi
+
+configuration {
+  display-drun: "";
+  icon-theme: "Papirus-Dark";
+  application-fallback-icon: "Adwaita";
+  show-icons: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
+  timeout {
+      delay:  0;
+      action: "";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  font: "JetBrainsMono NF Bold 9";
+
+  background: #000000;
+  foreground: #cccccc;
+  accent: #5671ff;
+
+  background-color: @background;
+  text-color: @foreground;
+}
+
+window {
+  enabled: true;
+  location: south;
+  anchor: south;
+
+  width: 20%;
+  transparency: "real";
+
+  background-color: transparent;
+
+  border: 1px;
+  border-color: #2f2f2f;
+  border-radius: 6px;
+
+  y-offset: -12;
+}
+
+mainbox {
+  children: [ listview, separator, inputbar ];
+}
+
+separator {
+  enabled: true;
+  expand: false;
+  border: 1px 10px 1px 10px;
+  border-color: @background;
+  background-color: #2f2f2f;
+  padding: 1px;
+}
+
+inputbar {
+  background-color: @background;
+  children: [ textbox-prompt-colon, prompt, entry ];
+  border-radius: 0 0 6px 6px;
+}
+
+prompt {
+  enabled: true;
+  padding: 0px;
+}
+
+textbox-prompt-colon {
+    str: "";
+    expand: false;
+    text-color: @foreground;
+    padding: 16px 12px 16px 16px;
+}
+
+entry {
+  padding: 16px 16px 16px 8px;
+  placeholder: "Search";
+  placeholder-color: @foreground;
+}
+
+listview {
+  background-color: @background;
+  border-radius: 6px 6px 0 0;
+
+  lines: 8;
+  fixed-height: false;
+  padding: 2px 0;
+}
+
+element {
+  children: [ element-icon, element-text ];
+  background-color: @background;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+element-icon {
+  size: 1.2em;
+  padding: 10px;
+  background-color: transparent;
+}
+
+element-text {
+  padding: 12px 0;
+  background-color: transparent;
+}
+
+element selected {
+    background-color: #2f2f2f;
+}
