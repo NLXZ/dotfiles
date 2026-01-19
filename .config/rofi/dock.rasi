@@ -1,0 +1,90 @@
+// ~/.config/rofi/dock.rasi
+
+configuration {
+    icon-theme: "Papirus-Dark";
+    application-fallback-icon: "Adwaita";
+    show-icons: true;
+    display-dmenu: "";
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
+    enable-history: false;
+    timeout {
+        delay:  0;
+        action: "";
+    }
+}
+
+* {
+    font: "JetBrainsMono NF Bold 8";
+    background: #000000;
+    background-alt: #000000;
+}
+
+window {
+    enabled: true;
+    location: south;
+    width: 20%;
+    height: 72px;
+    fullscreen: false;
+    transparency: "real";
+    cursor: "default";
+    y-offset: -8;
+    background-color: transparent;
+}
+
+prompt {
+    enabled: false;
+}
+
+inputbar {
+    enabled: false;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+mainbox {
+    enabled: true;
+    children: [ "listview" ];
+    background-color: @background-alt;
+}
+
+listview {
+    enabled: true;
+    columns: 0;
+    lines: 7;
+    spacing: 10px;
+    padding: 5px;
+    cycle: true;
+    dynamic: false;
+    layout: horizontal;
+    fixed-columns: false;
+    cursor: default;
+    background-color: transparent;
+}
+
+element {
+    enabled: true;
+    spacing: 0px;
+    padding: 5px;
+    orientation: vertical;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+element selected.normal {
+    background-color: transparent;
+}
+
+element-icon {
+    size: 52;
+    cursor: inherit;
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-text {
+    enabled: false;
+}

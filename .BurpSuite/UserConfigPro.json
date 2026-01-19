@@ -47,56 +47,25 @@
                 "look_and_feel":"Dark"
             },
             "window_decoration":{
-                "use_custom_window_decorations":true
+                "use_custom_window_decorations":false
             }
         },
         "extender":{
             "extensions":[
                 {
-                    "bapp_serial_version":34,
-                    "bapp_uuid":"17d2949a985c4b7ca092728dba871943",
+                    "auto_reload":false,
+                    "bapp_serial_version":22,
+                    "bapp_uuid":"296e9a0730384be4b2fffef7b4e19b1f",
                     "errors":"ui",
-                    "extension_file":"bapps/17d2949a985c4b7ca092728dba871943/build/libs/param-miner-all.jar",
-                    "extension_type":"java",
-                    "loaded":true,
-                    "name":"Param Miner",
-                    "output":"ui",
-                    "use_ai":false
-                },
-                {
-                    "bapp_serial_version":20,
-                    "bapp_uuid":"26aaa5ded2f74beea19e2ed8345a93dd",
-                    "errors":"ui",
-                    "extension_file":"bapps/26aaa5ded2f74beea19e2ed8345a93dd/build/libs/jwt-editor-2.6.jar",
-                    "extension_type":"java",
-                    "loaded":true,
-                    "name":"JWT Editor",
-                    "output":"ui",
-                    "use_ai":false
-                },
-                {
-                    "bapp_serial_version":64,
-                    "bapp_uuid":"9abaa233088242e8be252cd4ff534988",
-                    "errors":"ui",
-                    "extension_file":"bapps/9abaa233088242e8be252cd4ff534988/turbo-intruder.jar",
+                    "extension_file":"bapps/296e9a0730384be4b2fffef7b4e19b1f/InQL.jar",
                     "extension_type":"java",
                     "loaded":false,
-                    "name":"Turbo Intruder",
+                    "name":"InQL - GraphQL Scanner",
                     "output":"ui",
                     "use_ai":false
                 },
                 {
-                    "bapp_serial_version":55,
-                    "bapp_uuid":"65033cbd2c344fbabe57ac060b5dd100",
-                    "errors":"ui",
-                    "extension_file":"bapps/65033cbd2c344fbabe57ac060b5dd100/hackvertor-all.jar",
-                    "extension_type":"java",
-                    "loaded":true,
-                    "name":"Hackvertor",
-                    "output":"ui",
-                    "use_ai":false
-                },
-                {
+                    "auto_reload":false,
                     "bapp_serial_version":10,
                     "bapp_uuid":"b324647b6efa4b6a8f346389730df160",
                     "errors":"ui",
@@ -108,6 +77,31 @@
                     "use_ai":false
                 },
                 {
+                    "auto_reload":false,
+                    "bapp_serial_version":34,
+                    "bapp_uuid":"17d2949a985c4b7ca092728dba871943",
+                    "errors":"ui",
+                    "extension_file":"bapps/17d2949a985c4b7ca092728dba871943/build/libs/param-miner-all.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Param Miner",
+                    "output":"ui",
+                    "use_ai":false
+                },
+                {
+                    "auto_reload":false,
+                    "bapp_serial_version":65,
+                    "bapp_uuid":"9abaa233088242e8be252cd4ff534988",
+                    "errors":"ui",
+                    "extension_file":"bapps/9abaa233088242e8be252cd4ff534988/turbo-intruder.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Turbo Intruder",
+                    "output":"ui",
+                    "use_ai":false
+                },
+                {
+                    "auto_reload":false,
                     "bapp_serial_version":51,
                     "bapp_uuid":"aaaa60ef945341e8a450217a54a11646",
                     "errors":"ui",
@@ -119,13 +113,26 @@
                     "use_ai":false
                 },
                 {
-                    "bapp_serial_version":22,
-                    "bapp_uuid":"296e9a0730384be4b2fffef7b4e19b1f",
+                    "auto_reload":false,
+                    "bapp_serial_version":58,
+                    "bapp_uuid":"65033cbd2c344fbabe57ac060b5dd100",
                     "errors":"ui",
-                    "extension_file":"bapps/296e9a0730384be4b2fffef7b4e19b1f/InQL.jar",
+                    "extension_file":"bapps/65033cbd2c344fbabe57ac060b5dd100/hackvertor-all.jar",
                     "extension_type":"java",
-                    "loaded":false,
-                    "name":"InQL - GraphQL Scanner",
+                    "loaded":true,
+                    "name":"Hackvertor",
+                    "output":"ui",
+                    "use_ai":false
+                },
+                {
+                    "auto_reload":false,
+                    "bapp_serial_version":20,
+                    "bapp_uuid":"26aaa5ded2f74beea19e2ed8345a93dd",
+                    "errors":"ui",
+                    "extension_file":"bapps/26aaa5ded2f74beea19e2ed8345a93dd/build/libs/jwt-editor-2.6.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"JWT Editor",
                     "output":"ui",
                     "use_ai":false
                 }
