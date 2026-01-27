@@ -1,7 +1,10 @@
-// ~/.config/rofi/theme.rasi
+// ~/.config/rofi/drun.rasi
 
 configuration {
   display-drun: "";
+  modi: "drun";
+  drun-match-fields: "name";
+  no-tokenize: true;
   icon-theme: "Papirus-Dark";
   application-fallback-icon: "Adwaita";
   show-icons: true;
@@ -18,51 +21,35 @@ configuration {
   margin: 0;
   padding: 0;
   spacing: 0;
-
   font: "JetBrainsMono NF Bold 9";
-
   background: #000000;
   foreground: #cccccc;
   accent: #5671ff;
-
   background-color: @background;
   text-color: @foreground;
 }
 
 window {
   enabled: true;
-  location: south;
-  anchor: south;
-
+  location: north;
+  anchor: north;
   width: 20%;
   transparency: "real";
-
-  background-color: transparent;
-
+  background-color: @background;
   border: 1px;
   border-color: #2f2f2f;
   border-radius: 6px;
-
-  y-offset: -12;
+  padding: 12px;
+  y-offset: 42px;
 }
 
 mainbox {
-  children: [ listview, separator, inputbar ];
-}
-
-separator {
-  enabled: true;
-  expand: false;
-  border: 1px 10px 1px 10px;
-  border-color: @background;
-  background-color: #2f2f2f;
-  padding: 1px;
+  children: [ inputbar, listview ];
 }
 
 inputbar {
   background-color: @background;
   children: [ textbox-prompt-colon, prompt, entry ];
-  border-radius: 0 0 6px 6px;
 }
 
 prompt {
@@ -74,29 +61,31 @@ textbox-prompt-colon {
     str: "";
     expand: false;
     text-color: @foreground;
-    padding: 16px 12px 16px 16px;
+    padding: 6px 18px 0px 8px;
 }
 
 entry {
-  padding: 16px 16px 16px 8px;
+  padding: 6px 6px 6px 0px;
   placeholder: "Search";
   placeholder-color: @foreground;
 }
 
 listview {
   background-color: @background;
-  border-radius: 6px 6px 0 0;
-
+  require-input: true;
+  border: 1px 0px 0px 0px;
+  border-color: #2f2f2f;
   lines: 8;
   fixed-height: false;
-  padding: 2px 0;
+  padding: 10px 0px 0px 0px;
+  margin: 12px 0px 0px 0px;
 }
 
 element {
   children: [ element-icon, element-text ];
   background-color: @background;
   border-radius: 6px;
-  margin: 4px;
+  margin: 6px 2px 2px 2px;
 }
 
 element-icon {
@@ -113,3 +102,4 @@ element-text {
 element selected {
     background-color: #2f2f2f;
 }
+

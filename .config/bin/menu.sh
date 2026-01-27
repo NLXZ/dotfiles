@@ -26,14 +26,14 @@ show_ui() {
         rm -f "$STATE_MANUAL"
     fi
     if needs_resize && [ "$mode" = "manual" ]; then
-        i3-msg "gaps top current set 40"
-        i3-msg "gaps horizontal current set 10"
+        i3-msg "gaps top current set 102"
+        i3-msg "gaps horizontal current set 92"
         i3-msg "gaps bottom current set 92"
     fi
     sleep 0.04
     polybar-msg cmd show 2>/dev/null || true
     entries=(
-        "Apps\0icon\x1fkali-www"
+        "Hide\0icon\x1fkali-www"
         "Kitty\0icon\x1fkitty"
         "Google Chrome\0icon\x1fcom.google.Chrome"
         "Burp Suite\0icon\x1fkali-burpsuite"
@@ -41,12 +41,12 @@ show_ui() {
         "Ghidra\0icon\x1fkali-ghidra"
         "Thunar\0icon\x1fthunar"
     )
-    choice=$(printf "%b\n" "${entries[@]}" | rofi -dmenu -theme ~/.config/rofi/dock.rasi -transient-window)
+    { rofi -show drun -theme ~/.config/rofi/drun.rasi -disable-history -transient-window -steal-focus; hide_ui; } >/dev/null 2>&1 &
+    choice=$(printf "%b\n" "${entries[@]}" | rofi -dmenu -theme ~/.config/rofi/dock.rasi -transient-window -pid /tmp/rofi.pid)
     [ -z "$choice" ] && return
     cmd="${choice%%:*}"
     case "$cmd" in
-        Apps)
-            rofi -show drun -disable-history
+        Hide)
             hide_ui
             ;;
         Kitty)
@@ -61,16 +61,16 @@ show_ui() {
             setsid burpsuite >/dev/null 2>&1 &
             hide_ui
             ;;
-        Thunar)
-            setsid thunar >/dev/null 2>&1 &
-            hide_ui
-            ;;
         Wireshark)
             setsid wireshark >/dev/null 2>&1 &
             hide_ui
             ;;
         Ghidra)
             setsid ghidra >/dev/null 2>&1 &
+            hide_ui
+            ;;
+        Thunar)
+            setsid thunar >/dev/null 2>&1 &
             hide_ui
             ;;
     esac
