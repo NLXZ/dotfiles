@@ -3,6 +3,7 @@ ZSH_CONFIG_DIR="$HOME/.zsh"
 
 ZSH_MODULES=(
     "exports"
+    "history"
     "zsh-options"
     "bindkeys"
     "plugins"
