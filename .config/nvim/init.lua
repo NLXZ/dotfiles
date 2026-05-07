@@ -18,10 +18,6 @@ vim.opt.undoreload = 10000
 vim.api.nvim_set_keymap('n', 'y', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', 'y', '"+y', { noremap = true, silent = true })
 
--- Paragraph navigation
-vim.api.nvim_set_keymap('n', '<C-Up>', '{', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-Down>', '}', { noremap = true, silent = true })
-
 -- Packer Install
 local packer_bootstrap = false
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -35,6 +31,10 @@ end
 require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'norcalli/nvim-colorizer.lua'
+
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
 
 require'colorizer'.setup({

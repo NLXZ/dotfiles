@@ -10,16 +10,14 @@ alias wfuzz='wfuzz -c'
 alias cat='batcat'
 alias ls='eza --color=always --group-directories-first'
 
+# zoxide
+alias w='z workdir'
+alias -- -='z -'
+
 # custom
 alias c='xsel -bi'
 alias p='proxychains -q'
 alias py='python3'
-alias vi='nvim'
-alias sudo='sudo '
 alias vpn='openvpn'
 alias docker-clean='docker system prune --all --volumes --force'
-alias kitty-reload='kill -SIGUSR1 $KITTY_PID'
-
-# zoxide
-alias w='z workdir'
-alias -- -='z -'
+alias burp='nohup burpsuite >/dev/null 2>&1 &'

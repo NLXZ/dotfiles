@@ -1,6 +1,7 @@
 // ~/.config/rofi/config.rasi
 
 configuration {
+  disable-history: true;
   no-tokenize: true;
   timeout {
       delay:  0;
