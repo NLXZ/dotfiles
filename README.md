@@ -11,6 +11,6 @@ Or just run:
 # Clone the repository
 git clone https://github.com/NLXZ/dotfiles ~/.dotfiles
 
-# Create the links (CAUTION)
-stow -t ~ -d ~/.dotfiles --adopt .
+# Apply (CAUTION)
+rsync -a "$HOME"/.dotfiles/ "$HOME"/
 ```
