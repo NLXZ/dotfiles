@@ -1,7 +1,8 @@
 # ~/.config/i3/config
 
 # Init
-exec_always --no-startup-id feh --bg-fill ~/.wallpaper      # Wallpaper
+exec_always --no-startup-id feh --bg-fill ~/.wallpaper  # Wallpaper
+exec_always --no-startup-id vmware-user                 # VMWare
 
 # Keybinds
 set $mod Mod4
