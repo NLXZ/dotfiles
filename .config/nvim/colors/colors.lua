@@ -1,22 +1,22 @@
 -- ~/.config/colors/colors.lua
 
 local palette = {
-    color0  = "#333333",
-    color1  = "#dc322f",
-    color2  = "#859900",
-    color3  = "#b58900",
-    color4  = "#6669e9",
-    color5  = "#d33682",
-    color6  = "#2aa198",
-    color7  = "#eee8d5",
-    color8  = "#555555",
-    color9  = "#cb4b16",
-    color10 = "#586e75",
-    color11 = "#657b83",
-    color12 = "#839496",
-    color13 = "#6c71c4",
-    color14 = "#93a1a1",
-    color15 = "#fdf6e3",
+color0  = "#555555",
+color1  = "#b80e30",
+color2  = "#00aa44",
+color3  = "#d88d00",
+color4  = "#777fff",
+color5  = "#d33682",
+color6  = "#2aa198",
+color7  = "#eee8d5",
+color8  = "#666666",
+color9  = "#cb4b16",
+color10 = "#586e75",
+color11 = "#657b83",
+color12 = "#839496",
+color13 = "#6c71c4",
+color14 = "#93a1a1",
+color15 = "#fdf6e3",
 }
 
 vim.cmd('highlight clear')

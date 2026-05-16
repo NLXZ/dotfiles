@@ -78,7 +78,7 @@ gaps inner 6
 gaps outer 3
 
 # Colors
-set $accent      #6669e9
+set $accent      #777fff
 set $background  #2f2f2f
 set $foreground  #eeeeee
 
